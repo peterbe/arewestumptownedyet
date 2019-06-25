@@ -1088,6 +1088,29 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
 
+"@material/base@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@material/base/-/base-1.0.0.tgz#e4ef0b22c54aa887af94f5988fb1c0cb3245beba"
+  integrity sha512-5dxFp46x5FA+Epg6YHLzN+5zRt9S2wR84UdvVAEJ1egea94m9UHUg7y9tAnNSN16aexRSywmzyLwPr+i8PGEYA==
+  dependencies:
+    tslib "^1.9.3"
+
+"@material/mwc-base@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@material/mwc-base/-/mwc-base-0.5.0.tgz#21f9f237acea444b07a0fb1dfd45d30ef8f62374"
+  integrity sha512-G0n5LCmeXs9QR/ptHgUmV043wUVN2Uq1CWxUeGisGEPCI5e/mt9ISk5/7MubO25yF9muQeQXxXdRt/kFc7xGCg==
+  dependencies:
+    "@material/base" "^1.0.0"
+    lit-element "^2.0.1"
+    lit-html "^1.0.0"
+
+"@material/mwc-icon@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@material/mwc-icon/-/mwc-icon-0.5.0.tgz#432a1c5b7d817f1d04341b3c4bb8ef514cbd8cb6"
+  integrity sha512-vDzNc3sYPm9I5cG//TiYM5BTt3zW283zC8F5mx2rmtK3E7/UXRZmT6b94rv9em7mEUv86DedYPzCzND8oXctxA==
+  dependencies:
+    "@material/mwc-base" "^0.5.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -1100,6 +1123,13 @@
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
+
+"@polymer/polymer@^3.2.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-3.3.0.tgz#52a0665ac29654728e8f46e8ee178c02c49efdd0"
+  integrity sha512-rij7suomS7DxdBamnwr/Xa0V5hpypf7I9oYKseF2FWz5Xh2a3wJNpVjgJy1adXVCxqIyPhghsrthnfCt7EblsQ==
+  dependencies:
+    "@webcomponents/shadycss" "^1.9.1"
 
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
@@ -1473,6 +1503,11 @@
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
+
+"@webcomponents/shadycss@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.9.1.tgz#d769fbadfa504f11b84caeef26701f89070ec49a"
+  integrity sha512-IaZOnWOKXHghqk/WfPNDRIgDBi3RsVPY2IFAw6tYiL9UBGvQRy5R6uC+Fk7qTZsReTJ0xh5MTT8yAcb3MUR4mQ==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -5781,6 +5816,18 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+lit-element@^2.0.1, lit-element@^2.1.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-2.2.0.tgz#e853be38021f0c7743a10180affdf84b8a02400c"
+  integrity sha512-Mzs3H7IO4wAnpzqreHw6dQqp9IG+h/oN8X9pgNbMZbE7x6B0aNOwP5Nveox/5HE+65ZfW2PeULEjoHkrwpTnuQ==
+  dependencies:
+    lit-html "^1.0.0"
+
+lit-html@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.1.0.tgz#6951fb717fb48fe34d915ae163448a04da321562"
+  integrity sha512-ZDJHpJi09yknMpjwPI8fuSl5sUG7+pF+eE5WciFtgyX7zebvgMDBgSLq4knXa7grxM00RkQ7PBd7UZQiruA78Q==
+
 load-json-file@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
@@ -7874,7 +7921,7 @@ react-dev-utils@^9.0.1:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@16.8.6:
+react-dom@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
@@ -7954,7 +8001,7 @@ react-scripts@3.0.1:
   optionalDependencies:
     fsevents "2.0.6"
 
-react@16.8.6:
+react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
@@ -8304,6 +8351,13 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+roughjs@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/roughjs/-/roughjs-3.1.0.tgz#d011b9239fd1790e487bbfa204c98f1c786966ac"
+  integrity sha512-WJIKyWxBlEIuMeK0foUZD1KVYzT6Dn62ksawZrlu3BzxUxgtPdnlCMDgX/C3N5gxj/AMRazstKOFm70tqTo5Bw==
+  dependencies:
+    workly "^1.2.0"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -9218,7 +9272,7 @@ ts-pnp@1.1.2, ts-pnp@^1.0.0:
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.1.2.tgz#be8e4bfce5d00f0f58e0666a82260c34a57af552"
   integrity sha512-f5Knjh7XCyRIzoC/z1Su1yLLRrPrFCgtUAh/9fCSP6NKbATwpOL1+idQVXQokK9GRFURn/jYPGPfegIctwunoA==
 
-tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
@@ -9769,6 +9823,173 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2 || 2"
 
+wired-button@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-button/-/wired-button-1.0.0.tgz#7b41220b4b1f03d34e318b16307b86f6153aebe4"
+  integrity sha512-IUDrLpvLzLlUHOrakCb1QBLWbp1xhpoIMrrggnW7qG+4OWc/SR8N1FK1uBskqPjuqqRZPCPTBCO9QjRgKMgqjA==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-card@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-card/-/wired-card-1.0.0.tgz#586249dc480d3c6cd2f8606a4ae9e150905230a8"
+  integrity sha512-GVHHU6wDppZBgGM/nl5sNzF6HMXjn43OJBjBKqo1SlIdpa4l0evZq/4D7h4mP0FYvxY9SuNNQLkOU3RvVuGeow==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-checkbox@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-checkbox/-/wired-checkbox-1.0.0.tgz#5165c1fd87ce271dbbd3b0933330c8a18eb35cea"
+  integrity sha512-FTcBbtSHwT6DA2h01Y4lkUbsVrskPjTRNJ4EWNai4eN6FdAvf5vw+I4/d+6Dgatr495LLoaae2HqcEOqTE1I3A==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-combo@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-combo/-/wired-combo-1.0.0.tgz#9a1f49e2e3bb9206d42996d45f12d994dc428ead"
+  integrity sha512-fqx6SVa5d0GbrmnhKiPvVvRGZV76Qr9RIIeC1j1SqnXyMYGcu/xElezbHaajbkoU4tr4c78N7YFGBbE5cZ5Qsg==
+  dependencies:
+    wired-card "^1.0.0"
+    wired-item "^1.0.0"
+    wired-lib "^1.0.0"
+
+wired-elements@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-elements/-/wired-elements-1.0.0.tgz#6fe80fe763ba7249e5b09fb57648e2cda4a9ad3d"
+  integrity sha512-bmn92m3ajJmkTt6jqXkbSjgBkcJeQahOBh3qglyEAaqrPM4ifhb42AKXwwNHMakCXgVOfIxGlNDDv5B+OObsLQ==
+  dependencies:
+    wired-button "^1.0.0"
+    wired-card "^1.0.0"
+    wired-checkbox "^1.0.0"
+    wired-combo "^1.0.0"
+    wired-fab "^1.0.0"
+    wired-icon-button "^1.0.0"
+    wired-input "^1.0.0"
+    wired-item "^1.0.0"
+    wired-lib "^1.0.0"
+    wired-listbox "^1.0.0"
+    wired-progress "^1.0.0"
+    wired-radio "^1.0.0"
+    wired-radio-group "^1.0.0"
+    wired-slider "^1.0.0"
+    wired-spinner "^1.0.0"
+    wired-tabs "^1.0.0"
+    wired-textarea "^1.0.0"
+    wired-toggle "^1.0.0"
+    wired-tooltip "^1.0.0"
+
+wired-fab@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-fab/-/wired-fab-1.0.0.tgz#87022a36d8df14aa48d6b0bb7425d649dce357e5"
+  integrity sha512-FJ6mu3btoX/vnJwtDQ7gDCJQj4HBOtTezpwH8Gse7SwWbQJwRKIgPyaDkFyeHdYERF18G2uDQuIwUXoVSVWmqg==
+  dependencies:
+    "@material/mwc-icon" "^0.5.0"
+    wired-lib "^1.0.0"
+
+wired-icon-button@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-icon-button/-/wired-icon-button-1.0.0.tgz#4d73ccb6a4031bc4b7f4dadcaa4c93fc1471ee53"
+  integrity sha512-Krkm6lkUdkEM3yeR/H6MMYV0Q3ej/yN9pxu9KYIWeo1caqYbj3ENNnyAOLyoxeDbX2DWuyFkB4RCDFLGzKAGeQ==
+  dependencies:
+    "@material/mwc-icon" "^0.5.0"
+    wired-lib "^1.0.0"
+
+wired-input@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-input/-/wired-input-1.0.0.tgz#3e5e8b23b679ab66c0820dbb17304544d0f629fd"
+  integrity sha512-7m6yitMjMYtLN6OqaSfctfgGhN7dnSyRej5mEisboCPDwGBVmqSqj3mTSaHife4Lceu5jMRmrEUJQWCevozwyw==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-item@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-item/-/wired-item-1.0.0.tgz#95cb192afe03b0722ec718604fd89ee4f2d19f34"
+  integrity sha512-eJMRzp0nKRVTZSoAbKM5P1hM/vf3NyHftvL70Sg6sj8nqTVNoPvcErRPuVArvu6EcCNR0N3EKn72/Rf47O4uYg==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-lib@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-lib/-/wired-lib-1.0.0.tgz#c3ddef379708fe5e7febe0b2fe8cff051b76b99f"
+  integrity sha512-lEHQQkb8tDZdCrziCAW29GkGs/i23a+ZL68naDs+m0q2ZOdL1yNSjwUIgubmhW0Wv7QRQ0hWd6i/FT/r8SsYVQ==
+  dependencies:
+    lit-element "^2.1.0"
+    roughjs "^3.1.0"
+
+wired-listbox@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-listbox/-/wired-listbox-1.0.0.tgz#48650de5b4d3b75edfbe61378febccc1f0bef5ae"
+  integrity sha512-F8LBJQme+3P1n2BQmWacHWZ2n8Vj5YIxUNpCws9NfebGdXz6j6ayRkJsRReTzu9vZ6n6FjKv/DvnFIxa6UdPfA==
+  dependencies:
+    wired-item "^1.0.0"
+    wired-lib "^1.0.0"
+
+wired-progress@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-progress/-/wired-progress-1.0.0.tgz#1950901220b669412aaced4a02c698dad81fdc0e"
+  integrity sha512-gELShZ6VVPszWHrRdU7LzdjDGnKlalSJsdvZufT0ebJmredW2z5s5aSTjNMhSatnvCSMO2kWjy6KjFvjws8WGw==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-radio-group@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-radio-group/-/wired-radio-group-1.0.0.tgz#ac79c7bb5f6c9798efde516bac18c93eed1c16eb"
+  integrity sha512-hRDNdGo4s0LP2zPuBeNyAcQ4Oz4AGot+rhzMslHD4QkkUDM987pimPMxCdCB7dMXH7gCAHLL3KLPLtFjcRdkAQ==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-radio@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-radio/-/wired-radio-1.0.0.tgz#4df13fd9163c8c047b498cac52eac83de5f1b577"
+  integrity sha512-t7KLGwb8DCLXNTBOsfbNIIGQGX42mNOGwhuCuqpVpFfis8gn3NlbK7PoJvzP8g4fBnCZQcsvuhrs6ILN/03M2Q==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-slider@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-slider/-/wired-slider-1.0.0.tgz#a7eec72bca8dbfa8608249df9b3857d1798cc9d5"
+  integrity sha512-tviS1CdWo8SR3cOisZf1QjzjXJAIUfVBw6FeDnqv8c5IA2+1x9BsuGYYBUqq1skfv/lj51nfQ3w55CYyGToP3w==
+  dependencies:
+    "@polymer/polymer" "^3.2.0"
+    wired-lib "^1.0.0"
+
+wired-spinner@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-spinner/-/wired-spinner-1.0.0.tgz#c75e169a95fb5c36c2f7da00467318b52b6c9539"
+  integrity sha512-srckPYKZk4WM41GqhvXQY2OGp78C+zvINrrgXg5QAs7apS/V1n/139MeyQuWDwqqa21HxCZfmEFwOzRYsSQ7/A==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-tabs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-tabs/-/wired-tabs-1.0.0.tgz#e5f895562f6f5bff35e41279104dc4ef339fbd01"
+  integrity sha512-GLjzSTQAIrlgspCZKQW+ICnbIyrAUIgXvRER5PH0GlaNZhMYpBMOAz4VnqjfLtthCNmdY0N3qFdzf9dF3Wu/0w==
+  dependencies:
+    wired-card "^1.0.0"
+    wired-item "^1.0.0"
+    wired-lib "^1.0.0"
+
+wired-textarea@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-textarea/-/wired-textarea-1.0.0.tgz#2cb4f94693fb803058193e4f0c73232d1dfec14d"
+  integrity sha512-0At2Ck0dZLok8+OXbZS/Vv50KHCllRkIb2ZEU+BoxcTkBDcRtYouzIueZ/PAiSuHdoLyUFXf6NWQAuWDbNaDyQ==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-toggle@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-toggle/-/wired-toggle-1.0.0.tgz#05000176a7554523db11cbcda4222155e6c4f1f5"
+  integrity sha512-R3DO7tuUYoFrj92uW9+5EXgQbtZxJ6AnKxcEVjkyOTpJORXhnSqRvYh8ROQDKlNHXIJcqeOc7dL8dSBbIyo2Rg==
+  dependencies:
+    wired-lib "^1.0.0"
+
+wired-tooltip@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wired-tooltip/-/wired-tooltip-1.0.0.tgz#6ea3244028ff0e8af409503ad5dff2b081ff067f"
+  integrity sha512-pxoAsqYx7FemEC/h8rQk/4GsuH6xo5x833Wn0SzPDNZbcEFKXitxaN7kwvad5naVLN5WTcwTGiWS7LjuPAJ5uw==
+  dependencies:
+    wired-lib "^1.0.0"
+
 wordwrap@~0.0.2:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
@@ -9927,6 +10148,11 @@ worker-rpc@^0.1.0:
   integrity sha512-P1WjMrUB3qgJNI9jfmpZ/htmBEjFh//6l/5y8SD9hg1Ef5zTTVVoRjTrTEzPrNBQvmhMxkoTsjOXN10GWU7aCg==
   dependencies:
     microevent.ts "~0.1.1"
+
+workly@^1.2.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/workly/-/workly-1.3.0.tgz#86cd453139732ef1540ed7f094e058a3e879ba43"
+  integrity sha512-eozpibnwnyvsWJEoADCfo3171Ncl4J/57PQnZN37eoVgQG7buf3KEpPNfewDKH4OXf3eAZaUAF57i4ko5zY9Cw==
 
 wrap-ansi@^2.0.0:
   version "2.1.0"
