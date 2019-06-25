@@ -1,4 +1,4 @@
-# Are We Stumptowned Yet
+# Are We Stumptowned Yet?
 
 ## About
 
@@ -21,3 +21,11 @@ which you have, at some recent point, run `make deployment-build`. Then run:
 
 That will update `src/Stats.js` and possible files in `./stats-log/` which
 you need to git add.
+
+## Deployment
+
+Just run:
+
+    yarn run deploy
+
+You need to have write access to push to `github.com/peterbe/arewestumptownedyet`.
