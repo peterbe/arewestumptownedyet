@@ -1,0 +1,11 @@
+h1, h2 { text-align: center; }
+h2 { font-size: 1000%; margin-bottom: 100px;}
+h3 {
+  margin-top: 100px;
+}
+dl dt {
+  font-weight: bold;
+}
+dl dd.number {
+  font-size: 500%;
+}
