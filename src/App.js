@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <h1>Are We Stumptowned Yet?</h1>
-      <h2>No.</h2>
+      <h2>No :(</h2>
 
       <h3>What's this?</h3>
       <p>

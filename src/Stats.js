@@ -1,9 +1,9 @@
 /** This page is auto-generated from inject-stats.js
- * Date: Tue Jun 25 2019 14:27:03 GMT-0400 (Eastern Daylight Time)
+ * Date: Fri Aug 16 2019 10:27:57 GMT-0400 (Eastern Daylight Time)
  */
 
 const Stats = {
-  "date": 1561487223266,
+  "date": 1565965677780,
   "kuma": {
     "en-US": 18256,
     "all": 64262
