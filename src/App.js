@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
+import chartXkcd from "chart.xkcd";
 import "./light.css";
 import "./App.css";
+
 import Stats from "./Stats";
 
 function App() {
+  useEffect(() => {
+    const svg = document.querySelector(".bar-chart");
+
+    // You can't control the colors yet. :(
+    // https://github.com/timqian/chart.xkcd/issues/11#issuecomment-526298775
+    new chartXkcd.Bar(svg, {
+      title: "Kuma vs Stumptown", // optional
+      // xLabel: '', // optional
+      yLabel: "# documents", // optional
+      data: {
+        labels: ["Kuma (en-US)", "Stumptown"],
+        datasets: [
+          {
+            data: [Stats.kuma["en-US"], Stats.stumptown["en-US"]]
+          }
+        ]
+      },
+      options: {
+        // optional
+        yTickCount: 10
+      }
+    });
+  }, []);
   return (
     <div>
       <h1>Are We Stumptowned Yet?</h1>
@@ -61,6 +86,9 @@ function App() {
       <p>
         <small>As of {prettyTimestamp(Stats.date)}</small>
       </p>
+      <div>
+        <svg className="bar-chart"></svg>
+      </div>
     </div>
   );
 }
