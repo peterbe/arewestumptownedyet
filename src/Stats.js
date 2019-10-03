@@ -1,15 +1,15 @@
 /** This page is auto-generated from inject-stats.js
- * Date: Fri Aug 16 2019 10:27:57 GMT-0400 (Eastern Daylight Time)
+ * Date: Thu Oct 03 2019 12:54:54 GMT-0400 (Eastern Daylight Time)
  */
 
 const Stats = {
-  "date": 1565965677780,
+  "date": 1570121694561,
   "kuma": {
     "en-US": 18256,
     "all": 64262
   },
   "stumptown": {
-    "en-US": 50,
+    "en-US": 53,
     "all": null
   }
 };
