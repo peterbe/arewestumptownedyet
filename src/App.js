@@ -5,6 +5,9 @@ import "./App.css";
 
 import Stats from "./Stats";
 
+export const isServer =
+  typeof document === "undefined" || navigator.userAgent === "ReactSnap";
+
 function App() {
   return (
     <div>
@@ -78,6 +81,9 @@ function prettyTimestamp(ts) {
 export default App;
 
 function Chart() {
+  if (isServer) {
+    return <i>No SVG charts in server mode</i>;
+  }
   const data = {
     labels: ["Kuma (en-US)", "Stumptown"],
     values: [Stats.kuma["en-US"], Stats.stumptown["en-US"]]
