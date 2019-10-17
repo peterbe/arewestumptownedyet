@@ -1,34 +1,11 @@
-import React, { useEffect } from "react";
-import chartXkcd from "chart.xkcd";
+import React from "react";
+import { Bar } from "react-roughviz";
 import "./light.css";
 import "./App.css";
 
 import Stats from "./Stats";
 
 function App() {
-  useEffect(() => {
-    const svg = document.querySelector(".bar-chart");
-
-    // You can't control the colors yet. :(
-    // https://github.com/timqian/chart.xkcd/issues/11#issuecomment-526298775
-    new chartXkcd.Bar(svg, {
-      title: "Kuma vs Stumptown", // optional
-      // xLabel: '', // optional
-      yLabel: "# documents", // optional
-      data: {
-        labels: ["Kuma (en-US)", "Stumptown"],
-        datasets: [
-          {
-            data: [Stats.kuma["en-US"], Stats.stumptown["en-US"]]
-          }
-        ]
-      },
-      options: {
-        // optional
-        yTickCount: 10
-      }
-    });
-  }, []);
   return (
     <div>
       <h1>Are We Stumptowned Yet?</h1>
@@ -87,7 +64,7 @@ function App() {
         <small>As of {prettyTimestamp(Stats.date)}</small>
       </p>
       <div>
-        <svg className="bar-chart"></svg>
+        <Chart />
       </div>
     </div>
   );
@@ -99,3 +76,12 @@ function prettyTimestamp(ts) {
 }
 
 export default App;
+
+function Chart() {
+  const data = {
+    labels: ["Kuma (en-US)", "Stumptown"],
+    values: [Stats.kuma["en-US"], Stats.stumptown["en-US"]]
+  };
+
+  return <Bar data={data} roughness={2} width={800} stroke="#cccccc" />;
+}
