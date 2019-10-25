@@ -8,11 +8,13 @@
 const fs = require("fs");
 const path = require("path");
 
+const createCsvWriter = require("csv-writer").createObjectCsvWriter;
+
 const args = process.argv.slice(2);
 
 if (!args.length) {
   throw new Error(
-    "Usage: node inject-stats.js path/to/stumptown/packaged/dir [src/Stats.js]"
+    "Usage: node inject-stats.js path/to/stumptown/packaged/dir [src/Stats.js] [stats-log]"
   );
 }
 
@@ -20,6 +22,10 @@ let sourceDir = args[0];
 let destination = "src/Stats.js";
 if (args.length > 1) {
   destination = args[1];
+}
+let logsDir = "./stats-log";
+if (args.length > 2) {
+  logsDir = args[2];
 }
 
 let countJsonFiles = 0;
@@ -76,19 +82,40 @@ const stats = {
   }
 };
 
-fs.mkdirSync("stats-log", { recursive: true });
+fs.mkdirSync(logsDir, { recursive: true });
 const statsLogToday = new Date().toISOString().split("T")[0] + ".json";
 fs.writeFileSync(
-  path.join("stats-log", statsLogToday),
+  path.join(logsDir, statsLogToday),
   JSON.stringify(stats, null, 2)
 );
+
+const history = fs
+  .readdirSync(logsDir)
+  .filter(item => /\d\d\d\d-\d\d-\d\d\.json/.test(item))
+  .sort((a, b) => b - a)
+  .map(file => JSON.parse(fs.readFileSync(path.join(logsDir, file), "utf-8")));
+
+const csvOutfile = "public/history.csv";
+const csvWriter = createCsvWriter({
+  path: csvOutfile,
+  header: [{ id: "date", title: "DATE" }, { id: "count", title: "COUNT" }]
+});
+csvWriter
+  .writeRecords(
+    history.map(row => {
+      return { date: row.date, count: row.stumptown["en-US"] };
+    })
+  )
+  .then(() => {
+    console.log(`Wrote ${history.length} rows to ${csvOutfile}`);
+  });
+console.log(history);
 
 const code = `/** This page is auto-generated from inject-stats.js
  * Date: ${new Date()}
  */
 
-const Stats = ${JSON.stringify(stats, null, 2)};
-export default Stats;
+export const Stats = ${JSON.stringify(stats, null, 2)};
 `;
 
 fs.writeFileSync(destination, code);

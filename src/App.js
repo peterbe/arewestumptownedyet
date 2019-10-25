@@ -1,9 +1,9 @@
 import React from "react";
-import { Bar } from "react-roughviz";
+import { Bar, Line } from "react-roughviz";
 import "./light.css";
 import "./App.css";
 
-import Stats from "./Stats";
+import { Stats } from "./Stats";
 
 export const isServer =
   typeof document === "undefined" || navigator.userAgent === "ReactSnap";
@@ -67,7 +67,8 @@ function App() {
         <small>As of {prettyTimestamp(Stats.date)}</small>
       </p>
       <div>
-        <Chart />
+        <StatsChart />
+        <HistoryChart />
       </div>
     </div>
   );
@@ -80,7 +81,7 @@ function prettyTimestamp(ts) {
 
 export default App;
 
-function Chart() {
+function StatsChart() {
   if (isServer) {
     return <i>No SVG charts in server mode</i>;
   }
@@ -90,4 +91,29 @@ function Chart() {
   };
 
   return <Bar data={data} roughness={2} width={800} stroke="#cccccc" />;
+}
+
+function HistoryChart() {
+  if (isServer) {
+    return <i>No SVG charts in server mode</i>;
+  }
+  const data = process.env.PUBLIC_URL + "history.csv";
+  // Still a bit broken since it doesn't display the dates on the
+  // x-axis.
+  return (
+    <Line
+      data={data}
+      roughness={3}
+      width={800}
+      strokeWidth={1.5}
+      // x="date"
+      y="COUNT"
+      xLabel="Time"
+      yLabel="# Stumptown docs"
+      stroke="#cccccc"
+      title="# Stumptdown docs over time"
+      legend={false}
+      circleRadius={5}
+    />
+  );
 }
