@@ -1,11 +1,19 @@
-h1, h2 { text-align: center; }
-h2 { font-size: 1000%; margin-bottom: 100px;}
+h1,
+h2 {
+  text-align: center;
+}
+h2 {
+  font-size: 1000%;
+  margin: 200px;
+}
 h3 {
   margin-top: 100px;
 }
-dl dt {
-  font-weight: bold;
-}
-dl dd.number {
+p.number {
   font-size: 500%;
+  margin: 70px;
+}
+
+footer {
+  margin-top: 200px;
 }

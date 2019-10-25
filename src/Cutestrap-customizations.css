@@ -1,0 +1,33 @@
+* {
+  /* Sets our Baseline Grid */
+  --rhythm: 1.5rem;
+
+  /* Sets font-size relative to rhythm */
+  --line-height-ratio: 1.4;
+}
+
+/* Layout Specific Styles */
+
+body{
+  padding: var(--rhythm) var(--rhythm-half);
+  margin: 0 auto;
+  max-width: 65rem;
+}
+.header {
+ text-align: center;
+}
+
+.navigation {
+  text-align: center;
+}
+
+.navigation ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: 0;
+  justify-content: center;
+}
+
+.navigation li {
+  padding: 0 var(--rhythm-half);
+}

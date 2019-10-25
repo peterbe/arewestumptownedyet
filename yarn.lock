@@ -3415,6 +3415,11 @@ csv-writer@1.5.0:
   resolved "https://registry.yarnpkg.com/csv-writer/-/csv-writer-1.5.0.tgz#86c669be32cdd55dc2b66d722a3906f562547884"
   integrity sha512-Um27xYNzwI6iAXf96tz7j8nnabBbADeDd2cQ5gAjJaXyPrj3C7qX7uCI8Wp8Q+e9rRdkWQ+Sa1J6X5cDyInLWw==
 
+cutestrap@2.0.0-4:
+  version "2.0.0-4"
+  resolved "https://registry.yarnpkg.com/cutestrap/-/cutestrap-2.0.0-4.tgz#5f6d7b243f44f8ac231db39d43aa2d4fe8a9d22c"
+  integrity sha512-ED5INAKx6IRd0PkoZMRmseTS7KwvPoDuz5IBSwSjFT0aSXVVNvta8R7LTEXQd0qeiBxX8pK/PDPNa2IaGVIswg==
+
 cyclist@~0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
